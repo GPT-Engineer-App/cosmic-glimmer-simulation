@@ -12,8 +12,8 @@ const Planet = ({ position, size, color, name, distance, orbitalPeriod }) => {
         <meshStandardMaterial color={color} />
       </mesh>
       <Text
-        position={[position[0], position[1] + size + 0.5, position[2]]}
-        fontSize={0.5}
+        position={[position[0], position[1] + size + 0.3, position[2]]}
+        fontSize={0.3}
         color="white"
         anchorX="center"
         anchorY="middle"
@@ -21,14 +21,13 @@ const Planet = ({ position, size, color, name, distance, orbitalPeriod }) => {
         {name}
       </Text>
       <Text
-        position={[position[0], position[1] - size - 0.5, position[2]]}
-        fontSize={0.3}
+        position={[position[0], position[1] - size - 0.3, position[2]]}
+        fontSize={0.2}
         color="white"
         anchorX="center"
         anchorY="middle"
       >
-        {`Distance: ${distance} AU`}
-        {`\nOrbital Period: ${orbitalPeriod} years`}
+        {`${distance} AU, ${orbitalPeriod} yr`}
       </Text>
     </group>
   );
